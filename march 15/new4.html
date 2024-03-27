@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Circular Donut Chart</title>
+    <style>
+      .donut-chart {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .donut-chart .donut-segment {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        clip-path: polygon(50% 50%, 100% 0, 100% 100%);
+      }
+
+      .donut-chart .donut-segment:nth-child(1) {
+        background-color: #ff6347; /* Tomato */
+        transform: rotate(0deg);
+      }
+
+      .donut-chart .donut-segment:nth-child(2) {
+        background-color: #ffd700; /* Gold */
+        transform: rotate(72deg);
+      }
+
+      .donut-chart .donut-segment:nth-child(3) {
+        background-color: #6495ed; /* CornflowerBlue */
+        transform: rotate(144deg);
+      }
+
+      .donut-chart .donut-segment:nth-child(4) {
+        background-color: #2e8b57; /* SeaGreen */
+        transform: rotate(216deg);
+      }
+
+      .donut-chart .donut-segment:nth-child(5) {
+        background-color: #9932cc; /* DarkOrchid */
+        transform: rotate(288deg);
+      }
+
+      .donut-chart .donut-hole {
+        width: 120px; /* Adjust the size of the inner circle to change the thickness of the donut */
+        height: 120px;
+        border-radius: 50%;
+        background-color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="donut-chart">
+      <div class="donut-segment"></div>
+      <div class="donut-segment"></div>
+      <div class="donut-segment"></div>
+      <div class="donut-segment"></div>
+      <div class="donut-segment"></div>
+      <div class="donut-hole"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colorful Donut</title>
+    <style>
+      .donut {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        position: relative;
+        background: conic-gradient(
+          #ff0000 0%,
+          #ff9900 30%,
+          #ffff00 60%,
+          #33cc33 90%,
+          #3366cc 100%
+        );
+      }
+      .donut::before {
+        content: "";
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="donut"></div>
+  </body>
+</html>
